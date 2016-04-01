@@ -1,0 +1,50 @@
+body {
+
+}
+h1 {
+  font-size: 20pt;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: red;
+  text-align: center;
+}
+div {
+  background-color: #eee;
+  width: 200pt;
+  height: 200pt;
+  margin: 2px;
+  border-width: 10px;
+  border-color: red;
+  padding: 2px;
+}
+div.a {
+  float: left;
+  background-color: blue;
+}
+div.b {
+  background-color: yellow;
+}
+div.c {
+  float: right;
+  background-color: green;
+}
+div.d {
+
+}
+div.e {
+
+}
+div.f {
+
+}
+div.g {
+
+}
+div.h {
+
+}
+div.i {
+
+}
+footer {
+
+}
