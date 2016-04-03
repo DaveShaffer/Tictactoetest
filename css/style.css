@@ -3,17 +3,19 @@ body {
 }
 
 #gamefield {
-  width: 31.4em;
-  height: 31.4em;
+  width: 314px;
+  height: 314px;
   margin: 0 auto;
 }
 
 .cell {
   border: red solid 1px;
-  width: 10em;
-  height: 10em;
+  width: 100px;
+  height: 100px;
   /* display: inline-block; */
   float: left;
+  text-align: center;
+  font-size: 80px;
 }
 
 .row {
