@@ -1,5 +1,21 @@
+html {
+  background-color: yellow;
+}
+
 body {
   font-size: 10px;
+}
+
+input {
+  font-size: 20px;
+}
+
+#x {
+  float: left;
+}
+
+#o {
+  float: right;
 }
 
 #gamefield {
@@ -17,6 +33,7 @@ body {
   text-align: center;
   font-size: 80px;
 }
+
 h1 {
   font-size: 80px;
   text-align: center;

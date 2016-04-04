@@ -12,8 +12,15 @@ if ((turn === 'o') || (turn == 0)) { // If answer is o or 0, make it an O
 if ((turn !== 'X' ) && (turn !== 'O')) { // If answer is neither X or O, make it X
   turn = 'X';
 }
+// turn = turn == 'X' ? 'O' : 'X'; // Toggle player
 
-// var playGame = function() {
+var playGame = function() {
+   //turn = turn == 'X' ? 'O' : 'X'; // Toggle player
+     var $gameCell = $('.cell'); // build array of game cells
+  console.log(turn);
+for (var ndx = 0; ndx < 9; ndx++) {
+  $gameCell.eq(ndx).html(" ");
+}
 $(document).ready(function() {
   console.log("standing by");
   var $gameCell = $('.cell'); // build array of game cells
@@ -53,12 +60,13 @@ $(document).ready(function() {
       console.log(champ);
       if (champ == 'X') {
         scoreX++;
-        alert('The winner is ' + xName);
+        alert('X = ' + scoreX + '. O = ' + scoreO + '.' + 'The winner is ' + xName);
       }
       if (champ == 'O') {
         scoreO++
-        alert('The winner is ' + oName);
+        alert('X = ' + scoreX + '. O = ' + scoreO + '.' + 'The winner is ' + oName);
       }
+      turn = turn == 'X' ? 'O' : 'X'; // Toggle player
       //alert('X = ' + scoreX + '. O = ' + scoreO + '.' + 'The winner is ' + champ);
       return;
     }
@@ -67,7 +75,8 @@ $(document).ready(function() {
   })
 
 });
-
+}
 // for (var ndx = 0; ndx < 5; ndx++) {
-// playGame ();
+playGame ();
+
 // }
