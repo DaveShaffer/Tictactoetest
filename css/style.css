@@ -18,6 +18,11 @@ body {
   font-size: 80px;
 }
 
-.row {
-
+#plaX {
+  float: left;
+  font-size: 20px;
+}
+#plaO {
+  float: right;
+  font-size: 20px;
 }

@@ -29,5 +29,22 @@
     </section>
 
   </section>
+
+  <form id="plaX" action="form_action.asp">
+    Player X: <input type="text" name="xName"><br>
+  </form>
+  <form id="plaO" action="form_action.asp">
+    Player O: <input type="text" name="oName"><br>
+  </form>
+
+  <script>
+  function getName() {
+    $('plaX').html(" ").defaultValue = "Player X";
+  }
+  function getName() {
+    $('plaO').html(" ");
+  }
+  </script>
+
 </body>
 </html>
