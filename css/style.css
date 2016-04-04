@@ -17,12 +17,8 @@ body {
   text-align: center;
   font-size: 80px;
 }
-
-#plaX {
-  float: left;
-  font-size: 20px;
-}
-#plaO {
-  float: right;
-  font-size: 20px;
+h1 {
+  font-size: 80px;
+  text-align: center;
+  border: blue solid 10px;
 }

@@ -1,6 +1,7 @@
 //window.onload = playGame();
 //function playGame() {
-
+var xName = prompt("Player X: ", "Player X");
+var oName = prompt("Player O: ", "Player O");
 var champ = null; // The winner
 scoreX = 0;
 scoreO = 0;
@@ -52,13 +53,13 @@ $(document).ready(function() {
       console.log(champ);
       if (champ == 'X') {
         scoreX++;
-        //alert('The winner is ' + xName);
+        alert('The winner is ' + xName);
       }
       if (champ == 'O') {
         scoreO++
-        //alert('The winner is ' + oName);
+        alert('The winner is ' + oName);
       }
-      alert('X = ' + scoreX + '. O = ' + scoreO + '.' + 'The winner is ' + champ);
+      //alert('X = ' + scoreX + '. O = ' + scoreO + '.' + 'The winner is ' + champ);
       return;
     }
 
