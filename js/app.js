@@ -1,56 +1,49 @@
 $(document).ready(function() {
+  console.log("standing by");
+  var $gameCell = $('.cell'); // build array of game cells
+  var moves = Array(9).join(".").split("."); // build array to keep track of moves
+  var count = 0; // count the number of plays
+  var turn = 'X'; // X goes first
+  var champ = null; // The winner
 
-var $gameCell = $('.cell');
-var moves = Array(9).join(".").split(".");
-var count = 0;
-// var x = 0;
-var turn = 'X';
-var champ = null;
-var getWinner = function () {
-  if (winnerIs('X')) {
-    return 'X';
-  }
-  if (winnerIs('O')) {
-    return 'O';
-  } else {
+  var getWinner = function () { // Who won?
+    if (winnerIs(turn)) {
+      return turn;
+    }
     return null;
   }
-}
-var winnerIs = function (turn) {
-  return winsRow (turn) || winsCol (turn) || winsDiag (turn);
-}
-var winsRow = function (turn) {
-  return allThree (turn, moves[0], moves[1], moves[2]) || allThree (turn, moves[3], moves[4], moves[5]) || allThree (turn, moves[6], moves[7], moves[8]);
-}
-var winsCol = function (turn) {
-  return allThree (turn, moves[0], moves[3], moves[6]) || allThree (turn, moves[1], moves[4], moves[7]) || allThree (turn, moves[2], moves[5], moves[8]);
-}
-var winsDiag = function (turn) {
-  return allThree (turn, moves[0], moves[4], moves[8]) || allThree (turn, moves[2], moves[4], moves[6]);
-}
-var allThree = function (turn, cell1, cell2, cell3) {
-  return (cell1 === turn) && (cell2 === turn) && (cell3 === turn);
-}
+  var winnerIs = function (play) { // check rows, columns and diagonals
+    return winsRow (play) || winsCol (play) || winsDiag (play);
+  }
+  var winsRow = function (play) { // Does any row have 3-in-a-row?
+    return allThree (play, moves[0], moves[1], moves[2]) || allThree (play, moves[3], moves[4], moves[5]) || allThree (play, moves[6], moves[7], moves[8]);
+  }
+  var winsCol = function (play) { // Does any column have 3-in-a-row?
+    return allThree (play, moves[0], moves[3], moves[6]) || allThree (play, moves[1], moves[4], moves[7]) || allThree (play, moves[2], moves[5], moves[8]);
+  }
+  var winsDiag = function (play) { // Does either diagonal have 3-in-a-row?
+    return allThree (play, moves[0], moves[4], moves[8]) || allThree (play, moves[2], moves[4], moves[6]);
+  }
+  var allThree = function (play, cell1, cell2, cell3) { // Compare 3 cells for matching moves
+    return (cell1 === play) && (cell2 === play) && (cell3 === play);
+  }
 
-
-    // if (count => 5) {
   $($gameCell).one('click', function() {
-    count++;
-    moves[this.id] = (count % 2) ? 'X' : 'O';
-    $(this).html(turn);
+    count++; // Increment # of plays
+    moves[this.id] = (count % 2) ? 'X' : 'O'; // X plays even turns, O plays odd turns
+    $(this).html(turn); // Write the play on the game board
+    champ = getWinner(); // Do we have a winner?
+    console.log(moves, count, turn, champ);
+    if (champ) {
+      $('.cell').off();
+      console.log(champ);
+      return (champ);
+    }
 
-      champ = getWinner();
-      console.log(moves, count, turn, champ);
-
-
-    turn = turn == 'X' ? 'O' : 'X';
-
-    // console.log(moves, count, turn);
-
-
+  turn = turn == 'X' ? 'O' : 'X'; // Toggle player
   })
-// }
-    console.log("standing by");
 });
+
+
 
 
