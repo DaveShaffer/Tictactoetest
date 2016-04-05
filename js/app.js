@@ -1,27 +1,24 @@
-//window.onload = playGame();
-//function playGame() {
-var xName = prompt("Player X: ", "Player X");
+
+var xName = prompt("Player X: ", "Player X"); // Allow players to enter their names
 var oName = prompt("Player O: ", "Player O");
 var champ = null; // The winner
-scoreX = 0;
+scoreX = 0; // Initialize scoreboard
 scoreO = 0;
 var turn = prompt("Which side goes first, X or O?", "X"); // Does X or O go first?
 if ((turn === 'o') || (turn == 0)) { // If answer is o or 0, make it an O
   turn = 'O';
 }
-if ((turn !== 'X' ) && (turn !== 'O')) { // If answer is neither X or O, make it X
+if ((turn !== 'X' ) && (turn !== 'O')) { // If answer is neither X or O, default to X
   turn = 'X';
 }
-// turn = turn == 'X' ? 'O' : 'X'; // Toggle player
 
 var playGame = function() {
-   //turn = turn == 'X' ? 'O' : 'X'; // Toggle player
-     var $gameCell = $('.cell'); // build array of game cells
-  console.log(turn);
-for (var ndx = 0; ndx < 9; ndx++) {
+ var $gameCell = $('.cell'); // build array of game cells
+ console.log(turn);
+ for (var ndx = 0; ndx < 9; ndx++) { // Clear out game board
   $gameCell.eq(ndx).html(" ");
-}
-$(document).ready(function() {
+ }
+ $(document).ready(function() {
   console.log("standing by");
   var $gameCell = $('.cell'); // build array of game cells
   var moves = Array(9).join(".").split("."); // build array to keep track of moves
@@ -55,28 +52,33 @@ $(document).ready(function() {
     $(this).html(turn); // Write the play on the game board
     champ = getWinner(); // Do we have a winner?
     console.log(moves, count, turn, champ);
+
     if (count == 9 || champ) { // Is board full or has a player won?
       $('.cell').off(); // disable remaining cells
       console.log(champ);
       if (champ == 'X') {
         scoreX++;
         alert('X = ' + scoreX + '. O = ' + scoreO + '.' + 'The winner is ' + xName);
+        turn = turn == 'X' ? 'O' : 'X'; // Toggle player so that loser goes first
+        playGame ();
       }
       if (champ == 'O') {
         scoreO++
         alert('X = ' + scoreX + '. O = ' + scoreO + '.' + 'The winner is ' + oName);
+        turn = turn == 'X' ? 'O' : 'X'; // Toggle player so that loser goes first
+        playGame ();
       }
-      turn = turn == 'X' ? 'O' : 'X'; // Toggle player
-      //alert('X = ' + scoreX + '. O = ' + scoreO + '.' + 'The winner is ' + champ);
+      if ((count == 9) && (champ == null)) {
+        alert('Tie.  Nobody wins.');
+        playGame ();
+      }
       return;
     }
-
-  turn = turn == 'X' ? 'O' : 'X'; // Toggle player
+  turn = turn == 'X' ? 'O' : 'X'; // Next player's turn
   })
-
 });
 }
-// for (var ndx = 0; ndx < 5; ndx++) {
+
 playGame ();
 
-// }
+
