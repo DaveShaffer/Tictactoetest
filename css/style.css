@@ -10,12 +10,14 @@ input {
   font-size: 20px;
 }
 
-#x {
+#plaX {
   float: left;
+  font-size: 30px;
 }
 
-#o {
+#plaO {
   float: right;
+  font-size: 30px;
 }
 
 #gamefield {
@@ -38,4 +40,10 @@ h1 {
   font-size: 80px;
   text-align: center;
   border: blue solid 10px;
+}
+
+footer {
+  font-style: italic;
+  text-align: center;
+  color: #aaaaaa;
 }
