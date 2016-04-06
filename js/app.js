@@ -1,7 +1,7 @@
 var xName = prompt("Player X: ", "Player X"); // Allow players to enter their names
 var oName = prompt("Player O: ", "Player O");
 var champ = null; // The winner
-scoreX = 0; // Initialize scoreboard
+scoreX = 0; // Initialize scores
 scoreO = 0;
 
 var turn = prompt("Which side goes first, X or O?", "X"); // Does X or O go first?
