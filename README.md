@@ -1,4 +1,4 @@
-# Triple T
+# Triple T or ATL-Wood Squares
 
 >As professional Tic-Tac-Toe players, my wife and I play Tic-Tac-Toe all the time. By day's end, the house is littered with scraps of paper covered with Tic-Tac-Toe grids. We want to play the game on our computer so we can save paper and do our part to prevent global warming.
 
@@ -18,6 +18,9 @@ This is a screenshot of the wireframe:
 
 And the file from Mockflow:
 ![wireframe file](https://github.com/DaveShaffer/Tictactoetest/blob/master/WireframeComponent.mflib)
+
+## Technologies and Tools
+This game was built using HTML5, CSS3, JavaScript (ECMAScript 6) and jQuery 2.2.2.  The goals for builing the game were to hone recently gained skills manipulating the DOM (Document Object Model) using JavaScript/jQuery, practice planning and creating an HTML/CSS website and to gain experience with app deployment on GitHub.
 
 # Future Versions
 I hope to include background graphics, a start-up sound effect, an animation of the game before play starts with the computer generating random moves, a reset button to restart a game, special effects to announce a winner and buttons to let the users select different backgrounds.
