@@ -28,11 +28,3 @@ This game was built using HTML5, CSS3, JavaScript (ECMAScript 6) and jQuery 2.2.
 
 ### Future Versions
 I hope to include background graphics, buttons to let the users select different backgrounds, a start-up sound effect, an animation of the game before play starts with the computer generating random moves, a reset button to restart a game before it is complete, special effects to announce a winner and formatting to handle various browsers and platforms.
-
-/blob/master/WireframeComponent.mflib)
-
-## Technologies and Tools
-This game was built using HTML5, CSS3, JavaScript (ECMAScript 6) and jQuery 2.2.2.  The goals for builing the game were to hone recently gained skills manipulating the DOM (Document Object Model) using JavaScript/jQuery, to practice planning and creating an HTML/CSS website and to gain experience with app deployment on GitHub.
-
-# Future Versions
-I hope to include background graphics, a start-up sound effect, an animation of the game before play starts with the computer generating random moves, a reset button to restart a game, special effects to announce a winner and buttons to let the users select different backgrounds.
