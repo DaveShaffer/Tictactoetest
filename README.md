@@ -10,7 +10,7 @@ http://daveshaffer.github.io/Tictactoetest/
 
 https://trello.com/b/okmIKT7Q/tic-tac-toe
 
-https://trello.com/c/fqSlrlRS/13-wireframe
+![#wireframe](https://github.com/DaveShaffer/Tictactoetest/blob/master/Screen_Shot_2016-04-02_at_10.21.45_PM.png)
 
 # Future Versions
 I hope to include background graphics, a start-up sound effect, an animation of the game before play starts with the computer generating random moves, a reset button to restart a game, special effects to announce a winner and buttons to let the users select different backgrounds.
