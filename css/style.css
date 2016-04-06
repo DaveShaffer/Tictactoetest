@@ -1,13 +1,12 @@
 html {
   background-color: yellow;
+  /*background: #00ffff url ('./img/ss036.gif');*/
+  /*background-repeat: repeat;*/
+  /*background-size: 500px 500px;*/
 }
 
 body {
   font-size: 10px;
-}
-
-input {
-  font-size: 20px;
 }
 
 #plaX {
@@ -34,12 +33,15 @@ input {
   float: left;
   text-align: center;
   font-size: 80px;
+  background-size: 100px 100px;
+  background-image: ("./img/wood005.jpg");
 }
 
 h1 {
   font-size: 80px;
   text-align: center;
   border: blue solid 10px;
+  background-image: ("./img/wood005.jpg");
 }
 
 footer {
