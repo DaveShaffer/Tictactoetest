@@ -8,20 +8,11 @@ This game begins with prompts for the users to enter their names for the scorebo
 
 ### Links
 Source code on github:
-<<<<<<< HEAD
 https://github.com/DaveShaffer/Tictactoetest.git
 
 Link to the game:
 http://daveshaffer.github.io/Tictactoetest/
 
-=======
-https://github.com/DaveShaffer/Triple-T
-
-Link to the game:
-
-
-
->>>>>>> gh-pages
 The Trello link:
 https://trello.com/b/okmIKT7Q/tic-tac-toe
 
@@ -31,9 +22,15 @@ Screenshot of the wireframe:
 Wireframe file from Mockflow:
 ![wireframe file](https://github.com/DaveShaffer/Tictactoetest/blob/master/WireframeComponent.mflib)
 
+<<<<<<< HEAD
+=======
+## Technologies and Tools
+This game was built using HTML5, CSS3, JavaScript (ECMAScript 6) and jQuery 2.2.2.  The goals for builing the game were to hone recently gained skills manipulating the DOM (Document Object Model) using JavaScript/jQuery, to practice planning and creating an HTML/CSS website and to gain experience with app deployment on GitHub.
+>>>>>>> a21faebcf0263950c56ffd02474a3850568a7271
 
 ### Technologies and Tools
 This game was built using HTML5, CSS3, JavaScript (ECMAScript 6) and jQuery 2.2.2.  The goals for builing the game were to hone recently gained skills manipulating the DOM (Document Object Model) using JavaScript/jQuery, to practice planning and creating an HTML/CSS website and to gain experience with app deployment on GitHub.
 
 ### Future Versions
 I hope to include background graphics, buttons to let the users select different backgrounds, a start-up sound effect, an animation of the game before play starts with the computer generating random moves, a reset button to restart a game before it is complete, special effects to announce a winner and formatting to handle various browsers and platforms.
+
